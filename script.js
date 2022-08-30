@@ -3,7 +3,7 @@ const board = document.querySelector(".board");
 const withBoard = board.clientWidth;
 const widthContainer = document.querySelector(".container").clientWidth;
 const countSquary = widthContainer>770 ? 700 : 484;
-if (widthContainer <= 770) mobileControl.classList.add('hide');
+if (widthContainer > 770) mobileControl.remove();
 for (let k = 0; k<countSquary; k++) {
     const squary = document.createElement('div');
     squary.classList.add('squary');

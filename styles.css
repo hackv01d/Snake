@@ -157,10 +157,6 @@ body {
     justify-content: center;
 }
 
-.mobile-control {
-    z-index: -1;
-}
-
 .hide {
     z-index: 1;
 }
@@ -238,7 +234,7 @@ body {
 .mobile-btn {
     background: transparent;
     color: #fff;
-    font-size: 45px;
+    font-size: 50px;
     cursor: pointer;
     border: 1px solid #fff;
     padding: 7px 10px;
@@ -247,6 +243,7 @@ body {
     border-radius: 5px;
     margin: 5px;
 }
+
 
 @media (max-width: 770px) {
     .mode-btns li {
@@ -267,9 +264,6 @@ body {
 
     .score-screen {
         margin-bottom: 0;
-    }
-    .screen:last-child {
-        justify-content: flex-start;
     }
 }
 
