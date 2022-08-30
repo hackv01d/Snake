@@ -1,6 +1,9 @@
+const mobileControl = document.querySelector(".mobile-control");
 const board = document.querySelector(".board");
-const countSquary = 700;
-
+const withBoard = board.clientWidth;
+const widthContainer = document.querySelector(".container").clientWidth;
+const countSquary = widthContainer>770 ? 700 : 484;
+if (widthContainer <= 770) mobileControl.classList.add('hide');
 for (let k = 0; k<countSquary; k++) {
     const squary = document.createElement('div');
     squary.classList.add('squary');
@@ -9,7 +12,6 @@ for (let k = 0; k<countSquary; k++) {
 
 const squaries = Array.from(document.querySelectorAll(".squary"));
 
-const withBoard = board.clientWidth;
 const withSquary = squaries[0].clientWidth + 2 * 2;
 const countInLine = Math.floor(withBoard / withSquary);
 const countLine = countSquary / countInLine;
@@ -31,7 +33,6 @@ for (let k = 0; k<countInLine; k++) {
 let moves = ['u'];
 let partSnake = [];
 let active;
-
 const colors = ['color1', 'color2']
 const screens = document.querySelectorAll(".screen");
 const scoreGame = document.querySelector(".score-game")
@@ -102,6 +103,23 @@ document.addEventListener("keydown", event => {
             break;
         case 'ArrowUp':
         case 'w':
+            if (moves.at(-1) != 'd' || partSnake.length === 1) moves.push('u')
+            break;
+    }
+})
+
+mobileControl.addEventListener("click", event => {
+    switch(event.target.getAttribute('data-direction')) {
+        case 'r':
+            if (moves.at(-1) != 'l' || partSnake.length === 1) moves.push('r')
+            break;
+        case 'l':
+            if (moves.at(-1) != 'r' || partSnake.length === 1) moves.push('l')
+            break;
+        case 'd':
+            if (moves.at(-1) != 'u' || partSnake.length === 1) moves.push('d')
+            break;
+        case 'u':
             if (moves.at(-1) != 'd' || partSnake.length === 1) moves.push('u')
             break;
     }
