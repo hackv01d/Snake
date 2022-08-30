@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    background: linear-gradient(90deg, #000 0%, #111 100%);
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: margin-top .7s ease;
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-board {
+    width: 500px;
+    margin-bottom: 7px;
+}
+
+.start-board h1 {
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+.start a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 50px;
+    border-radius: 15px;
+}
+
+.mode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode h1 {
+    color: #fff;
+    font-size: 80px;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.mode-btns {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode-btns li {
+    margin: 20px;
+}
+
+.btn {
+    background: transparent;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 7px 20px;
+    font-family: inherit;
+}
+
+.start a:hover, .btn:hover {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.board {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    padding: 5px;
+    box-shadow: 0px 0px 20px #3498db, 5px 5px 20px #2ecc71;
+    border-radius: 5px;
+    position: relative;
+}
+
+.score-screen {
+    height: 140px;
+    width: 130px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-point-screen {
+    height: 35px;
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+.big-point {
+    background: #fff;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #fff, 0 0 10px #fff;
+}
+
+.score-game {
+    font-size: 50px;
+    color: #fff;
+}
+
+.result-modal {
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    z-index: 1;
+}
+
+.result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 70px;
+    width: 70%;
+    height: 70%;
+}
+
+.res-btn {
+    background: transparent;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.res-btn:hover {
+    border-color:#2ecc71;
+    color: #2ecc71;
+}
+
+.change-mode {
+    margin-left: 15px;
+}
+
+.squary {
+    background: #111;
+    width: 17px;
+    height: 17px;
+    margin: 2px;
+    box-shadow: 0 0 2px #000;
+    transition: all .5s;
+}
+
+.squary.snake {
+    transition-duration: 0s;
+    border-radius: 3px;
+}
+.point {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #fff, 0 0 10px #fff;
+}
+
+.color1 {
+    background: #3498db;
+    box-shadow: 0 0 1px #3498db, 0 0 15px #3498db;
+
+}
+
+.color2 {
+    background: #2ecc71;
+    box-shadow: 0 0 1px #2ecc71, 0 0 15px #2ecc71;
+}
+
+
+
+
+

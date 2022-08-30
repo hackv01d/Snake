@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="screen">
+            <div class="start">
+                <div class="start-board">
+                    <h1>Snake</h1>
+                </div>
+                <a href="#" id="start-btn">START</a>
+            </div>
+        </div>  
+
+        <div class="screen">
+            <div class="mode">
+                <h1>Mode game</h1>
+                <ul class="mode-btns">
+                    <li>
+                        <button type="button" class="easy-mode-btn btn" data-mode="easy">
+                            Eeasy
+                        </button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="medium-mode-btn btn" data-mode="medium">
+                            Medium
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="hard-mode-btn btn" data-mode="hard">
+                            Hard
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+        <div class="screen">
+            <div class="score-screen">
+                <div class="big-point-screen">
+                    <div class="big-point"></div>
+                </div>
+                <p class="score-game">0</p>
+            </div>
+
+            <div class="board">
+                <div class="result-modal">
+                    <div class="result-screen">
+                        <p>Result: <span class="result-score">0</span></p>
+                        <div class="result-btns">
+                            <button type="button" class="new-game res-btn">New Game</button>
+                            <button type="button" class="change-mode res-btn">Change Mode</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
