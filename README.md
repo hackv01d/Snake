@@ -1,2 +1,2 @@
 # Snake
-[Beautiful Snake - pet-project](https://ivantomsk.github.io/Snake/#)
+[Beautiful Snake - pet-project](https://hackv01d.github.io/Snake/#)
